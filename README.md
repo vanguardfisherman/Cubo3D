@@ -19,4 +19,15 @@
 - **C:** resetear la cámara al encuadre inicial
 
 
+# Cubo3D (v0.3 — versión optimizada)
 
+Visualizador 3D en **Maven + jMonkeyEngine 3.6.1** para cargar un dado `.obj` (MagicaVoxel).  
+Esta versión prioriza simplicidad y rendimiento.
+
+## ✅ Qué cambió en v0.3 (optimizada)
+Quitamos para optimizar:
+- **Toggles** `R/G/C` y el método `setWireframe` (menos callbacks y recorrido del grafo).
+- **AmbientLight** (una **DirectionalLight** es suficiente en este caso).
+- **Materiales innecesarios en el piso**: ahora usamos `Unshaded` **sin** specular (más barato).
+
+Resultado: menos imports, menos lógica, menor consumo y el mismo objetivo visual.
