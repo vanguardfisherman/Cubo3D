@@ -31,3 +31,5 @@ Quitamos para optimizar:
 - **Materiales innecesarios en el piso**: ahora usamos `Unshaded` **sin** specular (más barato).
 
 Resultado: menos imports, menos lógica, menor consumo y el mismo objetivo visual.
+
+![Cubo renderizado en jMonkeyEngine](src/main/resources/models/vers/3.0.png)
